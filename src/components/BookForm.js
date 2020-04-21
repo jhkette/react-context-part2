@@ -7,6 +7,7 @@ const NewBookForm = () => {
   const [author, setAuthor] = useState('')
   const handleSubmit = (e) => {
     e.preventDefault();
+    // add dispatch type add_book with a book object
     dispatch( {type: 'ADD_BOOK', book:{
     title, author }
     })

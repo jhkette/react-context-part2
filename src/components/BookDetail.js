@@ -1,15 +1,15 @@
-import React, { useContext } from 'react';
-import {BookContext} from '../contexts/BookContext';
+import React, { useContext } from "react";
+import { BookContext } from "../contexts/BookContext";
 
-const BookDetail = ({book}) => {
-  const {dispatch}  = useContext(BookContext)
+const BookDetail = ({ book }) => {
+  const { dispatch } = useContext(BookContext);
   return (
-    <li onClick ={() => dispatch({type: 'REMOVE_BOOK', id:book.id})}>
-        <div className="title">{book.title}</div>
-        <div className="author">{book.author}</div>
-      
+    // add dispatch type REMOVE_BOOK" with id as second argument
+    <li onClick={() => dispatch({ type: "REMOVE_BOOK", id: book.id })}>
+      <div className="title">{book.title}</div>
+      <div className="author">{book.author}</div>
     </li>
-  )
-}
+  );
+};
 
-export default BookDetail
+export default BookDetail;
