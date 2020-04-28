@@ -24,7 +24,10 @@ dispatch method.  */
     localStorage.setItem("books", JSON.stringify(books));
   }, [books]);
 
+  
+
   return (
+    // add the state and dispatch function as values to Provider
     <BookContext.Provider value={{ books, dispatch }}>
       {props.children}
     </BookContext.Provider>
